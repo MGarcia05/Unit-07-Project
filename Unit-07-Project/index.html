@@ -8,7 +8,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
 <body>
     <div class="grid-container">
@@ -235,13 +236,13 @@
   <!-- messaging widget -->
   <section class="message">
       <h3>MESSAGE USER</h3>
-      <form autocomplete="off" class="widget-container" action="index.html" method="POST">
+      <form autocomplete="off" class="widget-container" action="index.html">
         <div class="autocomplete">
-            <input type="text" placeholder="Search for user" name="memberSearch" class="form-field userField" id="myInput">
+            <input type="text" placeholder="Search for User" name="memberSearch" class="form-field userField" id="myInput">
         </div>
 
           <textarea name="message" id="messageField" placeholder="Message for User" class="form-area"></textarea>
-          <button class="button-primary" id="send">Send</button>
+          <button class="button-primary" id="send">SEND</button>
       </form>
   </section>
 
@@ -250,7 +251,7 @@
       <h3>SETTINGS</h3>
       <!-- toggle switches -->
       <div class="switch-wrapper">
-          <h3 class="options-text">Send Email Notifications</h3>
+          <h4 class="options-text">Send Email Notifications</h4>
           <label class= "switch" style="width: 100px" onclick="">
               <input id="email-box" value="1" type="checkbox">
               <span class="slider round">
@@ -263,7 +264,7 @@
       </div>
 
       <div class="switch-wrapper">
-          <h3 class="options-text">Set Profile to Public</h3>
+          <h4 class="options-text">Set Profile to Public</h4>
           <label class= "switch" style="width: 100px" onclick="">
               <input id="profile-box" value="2" type="checkbox">
               <span class="slider round">
@@ -319,8 +320,8 @@
         </select>
 
         <div class="settings-button">
-            <button class="button-primary" id="save">Save</button>
-            <button class="button-disabled" id="cancel">Cancel</button>
+            <button class="button-primary" id="save">SAVE</button>
+            <button class="button-disabled" id="cancel">CANCEL</button>
         </div>
       </section>
 
