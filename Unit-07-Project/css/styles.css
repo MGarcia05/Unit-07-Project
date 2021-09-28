@@ -356,10 +356,10 @@ header h3 {
 }
 
 /* Members */
+
 .members h3,
 .recent-activity h3,
-.message h3,
-.settings h3 {
+.message h3 {
     margin: 1em 0 .5em 1.3em;
     font-weight: 700;
     font-size: .8em;
@@ -368,13 +368,14 @@ header h3 {
 
 .members,
 .recent-activity,
-.message,
-.settings {
+.message {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
+
+
 
 .profile-image {
     border-radius: 50%;
@@ -470,12 +471,23 @@ select {
 }
 /* Settings */
 
+.options-text {
+  margin: 10px 10px 5px 20px;
+  font-weight: 300;
+}
+
+.settings h3 {
+  margin: 1em 0 .5em 1.3em;
+  font-weight: 700;
+  font-size: .8em;
+}
+
 .switch-wrapper {
   display: flex;
-  flex-direction: row;
-  width: 90%;
-  margin: 1em 1em;
+  grid-template-columns: 10fr 5fr 15fr 10fr;
   align-items: center;
+  margin-bottom: 10px;
+  margin-top: 2.35em;
 }
 
 .switch h3 {
@@ -486,21 +498,23 @@ select {
   width: 75px;
   height: 34px;
   position: relative;
-  display: flex;
-
+  display: inline-block;
+  margin-right: 1em;
+  margin-left: auto;
 }
 
 .switch input {
   width: 0;
   height: 0;
-  opacity: 0; }
+  opacity: 0;
+}
 
 .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
-  left: 15px;
-  right: 20px;
+  left: 10px;
+  right: 0px;
   bottom: 0;
   background-color: #9799cf;
   -webkit-transition: .4s;
@@ -512,7 +526,7 @@ select {
   content: "";
   height: 26px;
   width: 26px;
-  left: 2px;
+  left: 3px;
   bottom: 4px;
   background-color: white;
   -webkit-transition: .4s;
@@ -528,7 +542,7 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(32px);
+  transform: translateX(58px);
 }
 
 /* Rounded sliders */
@@ -543,7 +557,7 @@ input:checked + .slider:before {
 .slider-text-on {
   position: absolute;
   top: 10px;
-  right: 42px;
+  right: 65px;
   color: #fff;
   font-size: .8em;
 }
@@ -569,7 +583,7 @@ select:focus {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: .5em 0;
+    margin: .5em 0em .5em 1.25em;
 }
 
 .button-disabled {
@@ -579,8 +593,18 @@ select:focus {
     border: none;
     background-color: grey;
     border-radius: 5px;
-    margin: .5em 0 .5em 1em;
+    margin: .25em 0 .5em 1em;
     flex-grow: 1;
+}
+
+.timezone {
+  display: flex;
+  width: 90%;
+  height: 40px;
+}
+
+#timezone {
+  margin: 1em 0em .5em 1.25em;
 }
 
 #save {
@@ -588,6 +612,7 @@ select:focus {
     flex-grow: 1;
     margin: 0;
 }
+
 .recent-arrow {
     display: none;
     color: rgb(99, 105, 189);
@@ -690,11 +715,19 @@ select:focus {
           margin: 1em 0 .5em 0;
       }
 
+      .switch-wrapper {
+        display: flex;
+      }
+
+      .switch {
+        margin-right: 400px;
+        margin-left: auto;
+      }
+
       input[type="text"],
       textarea,
       select,
       #send,
-      .switch,
       .settings-button {
           width: 95%;
       }
@@ -714,11 +747,20 @@ select:focus {
       .recent-activity, .settings {
           grid-column: 2 / span 1;
       }
-      .switch-email {
-          margin-right: 6em;
+      .switch {
+        margin-right: 37em;
+        margin-left: auto;
       }
-      .switch-profile {
-          margin-right: 8.2em;
+
+      .options-text {
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 0em;
+        margin-left: 15px; }
+
+      .switch-wrapper {
+        margin-bottom: 1.9em;
+        margin-top: 1.5em;
       }
       select {
           margin-bottom: .2em;
